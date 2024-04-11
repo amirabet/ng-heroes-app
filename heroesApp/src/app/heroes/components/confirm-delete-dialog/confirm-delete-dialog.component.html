@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Delete this hero?</h2>
+<mat-dialog-content>
+    <p>
+        If you proceed <b>{{ data.superhero }}</b> will be erased permamently.
+        <br/>
+        Are you sure?   
+    </p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <span class="spacer"></span>
+    <button mat-button (click)="onConfirm()" color="warn" cdkFocusInitial>
+        <mat-icon>delete</mat-icon>
+        Delete</button>
+</mat-dialog-actions>

@@ -1,12 +1,13 @@
 {
   "name": "heroes-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "backendserver": "json-server --watch data/db.json",
     "delete:docs": "del-cli ../docs -f",
     "copy:dist": "copyfiles dist/heroesApp/browser/* ../docs -f",
     "copy:browserassets": "copyfiles dist/heroesApp/browser/assets/* ../docs/assets/ -f",
@@ -37,6 +38,7 @@
     "@angular/compiler-cli": "^17.2.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
+    "json-server": "0.17.4",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
