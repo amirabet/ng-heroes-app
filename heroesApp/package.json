@@ -1,22 +1,23 @@
 {
   "name": "heroes-app",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "build:href": "ng build --base-href ./",
-    "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist && npm run copy:assets && npm run copy:favicon && npm run copy:browserassets && npm run copy:media",
+    "build:github": "npm run delete:docs && npm run build:href && npm run copy",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "backendserver": "json-server --watch data/db.json",
     "delete:docs": "del-cli ../docs -f",
+    "copy": "npm run copy:dist && npm run copy:assets && npm run copy:favicon && npm run copy:browserassets && npm run copy:media && npm run copy:jsondb",
     "copy:dist": "copyfiles dist/heroes-app/browser/* ../docs -f",
     "copy:browserassets": "copyfiles dist/heroes-app/browser/assets/* ../docs/assets/ -f",
     "copy:media": "copyfiles dist/heroes-app/browser/media/* ../docs/media/ -f",
     "copy:assets": "copyfiles src/assets/* ../docs/assets/ -f",
     "copy:favicon": "copyfiles *.ico ../docs/ -f",
-    "copy:jsondb": "copyfiles data/*.json ../ -f"
+    "copy:jsondb": "copyfiles data/*.json ../docs/ -f"
   },
   "private": true,
   "dependencies": {
