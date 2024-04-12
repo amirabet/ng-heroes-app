@@ -11,9 +11,9 @@
     "test": "ng test",
     "backendserver": "json-server --watch data/db.json",
     "delete:docs": "del-cli ../docs -f",
-    "copy:dist": "copyfiles dist/heroesApp/browser/* ../docs -f",
-    "copy:browserassets": "copyfiles dist/heroesApp/browser/assets/* ../docs/assets/ -f",
-    "copy:media": "copyfiles dist/heroesApp/browser/media/* ../docs/media/ -f",
+    "copy:dist": "copyfiles dist/heroes-app/browser/* ../docs -f",
+    "copy:browserassets": "copyfiles dist/heroes-app/browser/assets/* ../docs/assets/ -f",
+    "copy:media": "copyfiles dist/heroes-app/browser/media/* ../docs/media/ -f",
     "copy:assets": "copyfiles src/assets/* ../docs/assets/ -f",
     "copy:favicon": "copyfiles *.ico ../docs/ -f",
     "copy:jsondb": "copyfiles data/*.json ../ -f"
